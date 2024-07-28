@@ -1,5 +1,5 @@
 ## General
-ServerSencored is a Pocketmine plugin that works to censor messages that contain another server's domain/ip
+ServerCensored is a Pocketmine plugin that works to censor messages that contain another server's domain/ip
 
 ## Features
 - Censoring messages that contain the domain or ip of a server/website
