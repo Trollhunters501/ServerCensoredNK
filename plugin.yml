@@ -1,0 +1,6 @@
+name: ServerCensored
+version: 1.0.0
+api: [5.0.0]
+main: KumaDev\ServerCensored\Main
+author: KumaDeveloper
+description: A plugin to censor server names and domains in chat messages.
