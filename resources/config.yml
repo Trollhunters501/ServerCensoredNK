@@ -1,0 +1,8 @@
+# Configuration ServerCensored
+
+# If true, players with OP status will not be affected by censorship
+allow-op: true
+
+# List of servers that will not be censored
+unblocked-servers:
+  - play.example.com
