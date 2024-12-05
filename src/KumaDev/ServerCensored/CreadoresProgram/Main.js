@@ -12,4 +12,18 @@ script.addEventListener("PlayerChatEvent", function(event){
     let player = event.getPlayer();
     let message = event.getMessage();
     let exeptedDomains = config.getStringList("unblocked-servers");
+    let pattern = /\b(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}\b/;
+    if(player.isOp()) return;
+    if(pattern.test(message)){
+        let matches = message.match(pattern);
+        if(matches){
+            matches.forEach(function(domain){
+                if(!exeptedDomains.contains(domain)){
+                    let regex = new RegExp(domain, 'g');
+                    message = message.replace(regex, "*".repeat(domain.length));
+                }
+            });
+        }
+        event.setMessage(message);
+    }
 });
