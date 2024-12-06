@@ -27,3 +27,6 @@ script.addEventListener("PlayerChatEvent", function(event){
         event.setMessage(message);
     }
 });
+module.exports = {
+    onEnable: enable
+};
