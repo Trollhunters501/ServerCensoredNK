@@ -3,7 +3,7 @@ function enable(){
     let filconf = manager.getFile("ServerCensoredNK", "config.yml");
     if(!filconf.exists()){
         let escritor = new java.io.FileWriter(filconf);
-        escritor.write(require("./resources/config.yml"));
+        escritor.write(require("ServerCensoredNK/resources/config.yml"));
         escritor.close();
     }
     config = manager.createConfig(filconf, 2);
